@@ -6,7 +6,7 @@ services:
     build: ./generator
     environment:
       KAFKA_LISTENERS: PLAINTEXT://:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://10.154.0.2:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://35.234.146.82:9092
       TRANSACTIONS_TOPIC: queueing.transactions
       TRANSACTIONS_PER_SECOND: 1000
 
@@ -14,7 +14,7 @@ services:
     build: ./detector
     environment:
       KAFKA_LISTENERS: PLAINTEXT://:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://10.154.0.2:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://35.234.146.82:9092
       TRANSACTIONS_TOPIC: queueing.transactions
       LEGIT_TOPIC: streaming.transactions.legit
       FRAUD_TOPIC: streaming.transactions.fraud
